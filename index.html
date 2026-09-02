@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Marketingbureau</title>
+<style>
+  :root {
+    --primary: #1a73e8;
+    --dark: #1c1c1c;
+    --gray: #5f6368;
+    --bg-light: #f7f9fc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), #1558b0);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  header p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.95;
+  }
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .diensten {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .dienst {
+    background: var(--bg-light);
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dienst:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  .dienst h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--primary);
+  }
+  .dienst p {
+    color: var(--gray);
+    font-size: 0.95rem;
+  }
+  .cta {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--bg-light);
+  }
+  .cta h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+  }
+  .btn:hover {
+    background: #1558b0;
+  }
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--gray);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Groei online met een bureau dat resultaat levert</h1>
+  <p>Wij helpen bedrijven zichtbaar worden en meer klanten krijgen via SEO, Google Ads en zichtbaarheid in AI-zoekmachines.</p>
+</header>
+
+<main>
+  <div class="diensten">
+    <div class="dienst">
+      <h2>SEO</h2>
+      <p>Wij zorgen dat uw website beter vindbaar wordt in Google, met duurzame groei in bezoekers en conversies.</p>
+    </div>
+    <div class="dienst">
+      <h2>Google Ads</h2>
+      <p>Effectieve advertentiecampagnes die direct nieuwe klanten opleveren, met een helder rendement op uw investering.</p>
+    </div>
+    <div class="dienst">
+      <h2>GEO</h2>
+      <p>Wij optimaliseren uw content zodat uw bedrijf ook zichtbaar is in AI-zoekmachines zoals ChatGPT en Google AI Overviews.</p>
+    </div>
+  </div>
+</main>
+
+<section class="cta">
+  <h2>Klaar om te groeien?</h2>
+  <a href="mailto:info@voorbeeld.nl" class="btn">Neem contact op</a>
+</section>
+
+<footer>
+  &copy; 2026 Online Marketingbureau. Alle rechten voorbehouden.
+</footer>
+
+</body>
+</html>
