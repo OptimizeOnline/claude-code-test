@@ -1,0 +1,365 @@
+<div class="iom-cga-wrap">
+<style>
+.iom-cga-wrap {
+  --iom-primary: #1a73e8;
+  --iom-dark: #1c1c1c;
+  --iom-gray: #5f6368;
+  --iom-bg-light: #f7f9fc;
+  --iom-border: #e3e6ea;
+  box-sizing: border-box;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--iom-dark);
+  line-height: 1.65;
+  font-size: 17px;
+}
+.iom-cga-wrap *,
+.iom-cga-wrap *::before,
+.iom-cga-wrap *::after {
+  box-sizing: border-box;
+}
+.iom-cga-wrap h1,
+.iom-cga-wrap h2,
+.iom-cga-wrap h3 {
+  font-family: inherit;
+  color: var(--iom-dark);
+  line-height: 1.3;
+  font-weight: 700;
+}
+.iom-cga-wrap h1 {
+  font-size: 2.1rem;
+  margin: 0 0 16px;
+}
+.iom-cga-wrap h2 {
+  font-size: 1.5rem;
+  margin: 48px 0 16px;
+  padding-top: 8px;
+}
+.iom-cga-wrap h3 {
+  font-size: 1.15rem;
+  margin: 28px 0 10px;
+  color: var(--iom-primary);
+}
+.iom-cga-wrap p {
+  margin: 0 0 16px;
+}
+.iom-cga-wrap ul,
+.iom-cga-wrap ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+.iom-cga-wrap li {
+  margin-bottom: 8px;
+}
+.iom-cga-wrap a {
+  color: var(--iom-primary);
+  text-decoration: underline;
+}
+.iom-cga-wrap strong {
+  font-weight: 700;
+}
+.iom-cga-wrap .iom-cga-intro {
+  font-size: 1.1rem;
+  color: var(--iom-gray);
+  margin-bottom: 8px;
+}
+.iom-cga-wrap .iom-cga-callout {
+  background: var(--iom-bg-light);
+  border-left: 4px solid var(--iom-primary);
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin: 24px 0;
+}
+.iom-cga-wrap .iom-cga-callout p:last-child {
+  margin-bottom: 0;
+}
+.iom-cga-wrap .iom-cga-steps {
+  counter-reset: iom-cga-step;
+  list-style: none;
+  padding-left: 0;
+}
+.iom-cga-wrap .iom-cga-steps li {
+  position: relative;
+  padding-left: 44px;
+  margin-bottom: 18px;
+}
+.iom-cga-wrap .iom-cga-steps li::before {
+  counter-increment: iom-cga-step;
+  content: counter(iom-cga-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--iom-primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.iom-cga-wrap .iom-cga-table-scroll {
+  overflow-x: auto;
+  margin: 20px 0;
+  border: 1px solid var(--iom-border);
+  border-radius: 8px;
+}
+.iom-cga-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+.iom-cga-wrap th,
+.iom-cga-wrap td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--iom-border);
+  font-size: 0.95rem;
+}
+.iom-cga-wrap th {
+  background: var(--iom-bg-light);
+  font-weight: 700;
+}
+.iom-cga-wrap tr:last-child td {
+  border-bottom: none;
+}
+.iom-cga-wrap .iom-cga-faq-item {
+  border-bottom: 1px solid var(--iom-border);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.iom-cga-wrap .iom-cga-faq-item:last-child {
+  border-bottom: none;
+}
+.iom-cga-wrap .iom-cga-cta {
+  text-align: center;
+  background: var(--iom-bg-light);
+  border-radius: 12px;
+  padding: 40px 24px;
+  margin: 48px 0 24px;
+}
+.iom-cga-wrap .iom-cga-cta h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.iom-cga-wrap .iom-cga-cta p {
+  color: var(--iom-gray);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.iom-cga-wrap .iom-cga-btn {
+  display: inline-block;
+  background: var(--iom-primary);
+  color: #fff !important;
+  text-decoration: none !important;
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 12px;
+  transition: background 0.2s ease;
+}
+.iom-cga-wrap .iom-cga-btn:hover {
+  background: #1558b0;
+}
+.iom-cga-wrap .iom-cga-note {
+  font-size: 0.9rem;
+  color: var(--iom-gray);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .iom-cga-wrap {
+    font-size: 16px;
+    padding: 0 12px;
+  }
+  .iom-cga-wrap h1 {
+    font-size: 1.6rem;
+  }
+  .iom-cga-wrap h2 {
+    font-size: 1.3rem;
+    margin-top: 36px;
+  }
+  .iom-cga-wrap .iom-cga-cta {
+    padding: 28px 16px;
+  }
+}
+</style>
+
+<h1>Hoe kun je adverteren in ChatGPT Ads?</h1>
+<p class="iom-cga-intro">Steeds meer mensen stellen hun zoekvragen niet meer aan Google, maar aan ChatGPT. Daarom test en lanceert OpenAI advertentiemogelijkheden binnen ChatGPT zelf. In dit artikel lees je wat ChatGPT Ads is, hoe het werkt en hoe je als bedrijf een goede start maakt.</p>
+
+<div class="iom-cga-callout">
+<p><strong>In het kort:</strong> ChatGPT Ads brengt betaalde advertenties naar gesprekken in ChatGPT, vergelijkbaar met sponsored resultaten in Google. Wil je nu al zichtbaar zijn, ook zonder advertentiebudget? Zorg dan dat je website goed leesbaar is voor AI-systemen. Dat heet <strong>GEO (Generative Engine Optimization)</strong>, en werkt samen met adverteren juist heel goed.</p>
+</div>
+
+<h2>Wat is ChatGPT Ads?</h2>
+<p>ChatGPT Ads is de advertentiefunctie die OpenAI toevoegt aan ChatGPT. Gebruikers stellen een vraag of zoeken naar een product, en tussen de antwoorden door kan een relevante, gesponsorde aanbeveling verschijnen. Denk aan een winkel die opduikt bij een vraag over "beste hardloopschoenen onder 100 euro", of een dienstverlener die naar voren komt bij een vraag over een lokale klus.</p>
+<p>Het idee lijkt op hoe Google Ads werkt binnen de zoekresultaten: bedrijven betalen om op het juiste moment zichtbaar te zijn, precies wanneer iemand een koopintentie heeft. Het verschil is dat de gebruiker in ChatGPT niet zoekt met losse woorden, maar een heel gesprek voert. Dat maakt de advertentie relevanter, maar vraagt ook om een andere aanpak dan een traditionele zoekwoordcampagne.</p>
+
+<h2>Hoe werkt adverteren in ChatGPT?</h2>
+<p>Op basis van wat op dit moment bekend is over het platform, werkt adverteren in ChatGPT op hoofdlijnen zo:</p>
+<ul>
+<li><strong>Gesponsorde aanbevelingen in het gesprek.</strong> Een advertentie wordt getoond als relevante suggestie binnen het antwoord dat ChatGPT geeft, niet als losse banner.</li>
+<li><strong>Productdata als basis.</strong> Voor e-commerce werkt dit net als Google Shopping: hoe beter je productfeed (naam, prijs, voorraad, afbeelding), hoe groter de kans dat je product correct en aantrekkelijk getoond wordt.</li>
+<li><strong>Bieden en budget.</strong> Net als bij Google Ads en Meta Ads stel je waarschijnlijk een budget en een biedstrategie in, en betaal je per klik of per duizend vertoningen.</li>
+<li><strong>Targeting op intentie.</strong> Omdat ChatGPT de context van het hele gesprek kent, kan targeting nauwkeuriger zijn dan bij traditionele zoekwoorden.</li>
+</ul>
+<p class="iom-cga-note">Let op: OpenAI breidt de advertentiemogelijkheden in ChatGPT gefaseerd uit en de exacte functies, targetingopties en beschikbaarheid per land kunnen wijzigen. Check bij de start van een campagne altijd de actuele voorwaarden van OpenAI.</p>
+
+<h2>Voor wie is adverteren in ChatGPT interessant?</h2>
+<p>ChatGPT Ads is met name kansrijk voor:</p>
+<ul>
+<li><strong>Webshops</strong> die al een productfeed hebben voor Google Shopping of Meta.</li>
+<li><strong>Dienstverleners</strong> die inspelen op een concrete vraag, zoals een loodgieter, advocaat of marketingbureau.</li>
+<li><strong>B2B-bedrijven</strong> die zichtbaar willen zijn wanneer iemand research doet voor een aankoopbeslissing.</li>
+<li><strong>Lokale ondernemers</strong> die profiteren van vragen met een duidelijke locatie, zoals "beste restaurant in Utrecht".</li>
+</ul>
+
+<h2>Stappenplan: zo begin je met adverteren in ChatGPT</h2>
+<ol class="iom-cga-steps">
+<li><strong>Bepaal je doel en doelgroep.</strong> Wil je meer verkopen, leads of naamsbekendheid? En wie stelt de vraag die jouw product of dienst beantwoordt?</li>
+<li><strong>Zorg voor een sterke productfeed of duidelijke dienstinformatie.</strong> Actuele prijzen, voorraad en heldere omschrijvingen zijn de basis, precies zoals bij Google Shopping.</li>
+<li><strong>Meld je aan bij het advertentieplatform van OpenAI</strong>, zodra dit beschikbaar is voor jouw regio en branche.</li>
+<li><strong>Stel campagne, budget en targeting in.</strong> Begin met een beperkt testbudget om te leren wat werkt.</li>
+<li><strong>Zorg voor een sterke landingspagina.</strong> Wie doorklikt vanuit ChatGPT moet direct antwoord krijgen op de vraag die hij stelde.</li>
+<li><strong>Monitor en optimaliseer.</strong> Volg klikken, conversies en kosten, en stuur bij zoals je dat ook bij Google Ads doet.</li>
+</ol>
+
+<h2>Wat kost adverteren in ChatGPT?</h2>
+<p>De verwachting is dat ChatGPT Ads, net als Google Ads, werkt met een veilingmodel waarbij je betaalt per klik (CPC) of per duizend vertoningen (CPM). De exacte kosten hangen af van je branche, concurrentie en biedstrategie. Een indicatie op basis van vergelijkbare platforms:</p>
+<div class="iom-cga-table-scroll">
+<table>
+<thead>
+<tr>
+<th>Onderdeel</th>
+<th>Vergelijkbaar met</th>
+<th>Indicatie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kosten per klik</td>
+<td>Google Shopping / Search</td>
+<td>Varieert sterk per branche</td>
+</tr>
+<tr>
+<td>Minimaal instapbudget</td>
+<td>Meta Ads</td>
+<td>Vermoedelijk laagdrempelig, geschikt om te testen</td>
+</tr>
+<tr>
+<td>Biedmodel</td>
+<td>Veiling op relevantie en bod</td>
+<td>Hogere relevantie kan kosten drukken</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="iom-cga-note">Deze cijfers zijn een inschatting op basis van vergelijkbare advertentieplatforms. Vraag bij de start van een campagne altijd de actuele tarieven op bij OpenAI of je adviesbureau.</p>
+
+<h2>ChatGPT Ads versus GEO: wat is het verschil?</h2>
+<p>Naast betaald adverteren kun je ook <strong>organisch</strong> genoemd worden in antwoorden van ChatGPT. Dat heet GEO: je website zo inrichten dat AI-systemen je content goed begrijpen, vertrouwen en citeren. Het verschil met adverteren:</p>
+<ul>
+<li><strong>ChatGPT Ads</strong>: je betaalt direct voor zichtbaarheid, met snel resultaat en volledige controle over de boodschap.</li>
+<li><strong>GEO</strong>: je investeert in duidelijke, betrouwbare content, en bouwt zo langdurige, gratis zichtbaarheid op in AI-antwoorden.</li>
+</ul>
+<p>De combinatie werkt het sterkst: GEO zorgt dat je merk al vertrouwd overkomt, adverteren zorgt dat je op het juiste moment top of mind bent.</p>
+
+<h2>Tips om op te vallen met je advertentie in ChatGPT</h2>
+<ul>
+<li>Zorg voor een actuele en volledige productfeed, inclusief prijs en voorraad.</li>
+<li>Schrijf heldere, feitelijke productomschrijvingen zonder overdreven verkooptaal.</li>
+<li>Laat je landingspagina direct aansluiten op de vraag die iemand stelde.</li>
+<li>Test met een klein budget voordat je opschaalt.</li>
+<li>Combineer adverteren met sterke GEO- en SEO-content voor het beste van beide werelden.</li>
+</ul>
+
+<h2>Veelgestelde vragen over ChatGPT Ads</h2>
+
+<div class="iom-cga-faq-item">
+<h3>Is adverteren in ChatGPT al beschikbaar in Nederland?</h3>
+<p>OpenAI rolt advertentiemogelijkheden gefaseerd uit per land en branche. Controleer bij OpenAI of je marketingbureau wat op dit moment beschikbaar is voor jouw situatie.</p>
+</div>
+
+<div class="iom-cga-faq-item">
+<h3>Wat is het verschil tussen ChatGPT Ads en Google Ads?</h3>
+<p>Bij Google Ads reageer je op losse zoekwoorden, bij ChatGPT Ads reageer je op een heel gesprek. Daardoor kan de aanbeveling relevanter zijn, maar vraagt het ook om andere content en een andere aanpak.</p>
+</div>
+
+<div class="iom-cga-faq-item">
+<h3>Heb ik een productfeed nodig om te adverteren in ChatGPT?</h3>
+<p>Voor webshops is een actuele productfeed, vergelijkbaar met die voor Google Shopping, waarschijnlijk de basis voor goede resultaten. Voor dienstverleners is duidelijke, actuele informatie op de website minstens zo belangrijk.</p>
+</div>
+
+<div class="iom-cga-faq-item">
+<h3>Kan ik ChatGPT Ads zelf beheren, of heb ik een bureau nodig?</h3>
+<p>Net als bij Google Ads kun je dit zelf opzetten, maar een bureau met ervaring in zowel adverteren als GEO helpt je sneller resultaat te behalen en fouten te voorkomen.</p>
+</div>
+
+<div class="iom-cga-faq-item">
+<h3>Sluit adverteren in ChatGPT aan op mijn bestaande Google Ads-campagnes?</h3>
+<p>Ja. De opzet, denkwijze over doelgroepen en de manier van optimaliseren komen sterk overeen met Google Ads, waardoor je bestaande kennis en data goed te gebruiken zijn.</p>
+</div>
+
+<div class="iom-cga-cta">
+<h2>Wil je als een van de eersten adverteren in ChatGPT?</h2>
+<p>Wij helpen je met een sterke start: van productfeed en campagne-opzet tot een GEO-strategie die ervoor zorgt dat je merk ook organisch wordt genoemd door AI.</p>
+<a href="#contact" class="iom-cga-btn">Neem contact op</a>
+</div>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is adverteren in ChatGPT al beschikbaar in Nederland?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI rolt advertentiemogelijkheden gefaseerd uit per land en branche. Controleer bij OpenAI of je marketingbureau wat op dit moment beschikbaar is voor jouw situatie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat is het verschil tussen ChatGPT Ads en Google Ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bij Google Ads reageer je op losse zoekwoorden, bij ChatGPT Ads reageer je op een heel gesprek. Daardoor kan de aanbeveling relevanter zijn, maar vraagt het ook om andere content en een andere aanpak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Heb ik een productfeed nodig om te adverteren in ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voor webshops is een actuele productfeed, vergelijkbaar met die voor Google Shopping, waarschijnlijk de basis voor goede resultaten. Voor dienstverleners is duidelijke, actuele informatie op de website minstens zo belangrijk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ik ChatGPT Ads zelf beheren, of heb ik een bureau nodig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Net als bij Google Ads kun je dit zelf opzetten, maar een bureau met ervaring in zowel adverteren als GEO helpt je sneller resultaat te behalen en fouten te voorkomen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sluit adverteren in ChatGPT aan op mijn bestaande Google Ads-campagnes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. De opzet, denkwijze over doelgroepen en de manier van optimaliseren komen sterk overeen met Google Ads, waardoor je bestaande kennis en data goed te gebruiken zijn."
+      }
+    }
+  ]
+}
+</script>
